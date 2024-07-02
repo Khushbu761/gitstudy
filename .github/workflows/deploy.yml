@@ -15,4 +15,4 @@ jobs:
 
       - name: Deploy to Server
         run: |
-          ssh -i ${{ secrets.SSH_PRIVATE_KEY }} user@server_ip 'cd /path/to/repository && git pull'
+          ssh -i "jenkins1.pem" ec2-user@ec2-3-111-52-137.ap-south-1.compute.amazonaws.com 'cd /var/www/html && git pull'
